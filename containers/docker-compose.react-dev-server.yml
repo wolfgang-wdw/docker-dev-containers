@@ -1,0 +1,11 @@
+version: "3"
+services:
+  dev_server:
+    image: "react-dev-node8"
+    build: ../images/react-dev-node8
+    container_name: ${PROJECT_NAME}_dev_server
+    command: npm start
+    volumes:
+      - ${HOST_APP_DIR}:/usr/src/app
+    ports:
+      - "3000:3000"
